@@ -7,10 +7,11 @@
     @include breakpoint-up(medium) {
         padding: 0;
         margin-bottom: 68px;
+        padding-bottom: 26px;
     }
 
     &.error {
-        padding-bottom: 26px;
+        padding-bottom: 0;
     }
     &__title {
         font-size: $font-lg;
@@ -56,14 +57,21 @@
             border-radius: 28px;
             border: 1px solid $pale-blue;
             padding: 9px 0px 9px 32px;
-            // margin-bottom: 2px;
             line-height: 20px;
+            margin-bottom: 42px;
+
             @include breakpoint-up(medium) {
                 flex-grow: 1;
                 flex-basis: 50%;
                 margin-right: 16px;
                 padding: 18px 0px 18px 30px;
                 font-size: $font-sm;
+                margin-bottom: 0;
+            }
+
+            &.error {
+                border: 1px solid $light-red;
+                margin-bottom: 0;
             }
 
             &::placeholder {
@@ -84,18 +92,17 @@
                     margin-top: 6px;
                     font-size: $font-xs;
                 }
-                // display: none;
+                display: none;
 
-                // &.show {
-                //     display: block;
-                // }
+                &.show {
+                    display: block;
+                }
             }
         }
 
         &-btn {
             display: block;
             width: 100%;
-            margin-top: 8px;
             border: none;
             background-color: $blue;
             color: $white;
@@ -109,7 +116,6 @@
 
             @include breakpoint-up(medium) {
                 width: 200px;
-                margin-top: 0;
                 font-size: $font-sm;
                 line-height: 19px;
             }

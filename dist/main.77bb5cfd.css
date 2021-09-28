@@ -402,10 +402,11 @@ p {
   .hero {
     padding: 0;
     margin-bottom: 68px;
+    padding-bottom: 26px;
   }
 }
 .hero.error {
-  padding-bottom: 26px;
+  padding-bottom: 0;
 }
 .hero__title {
   font-size: 22px;
@@ -452,6 +453,7 @@ p {
   border: 1px solid #c2d3ff;
   padding: 9px 0px 9px 32px;
   line-height: 20px;
+  margin-bottom: 42px;
 }
 @media (min-width: 40em) {
   .hero__form-email {
@@ -460,7 +462,12 @@ p {
     margin-right: 16px;
     padding: 18px 0px 18px 30px;
     font-size: 16px;
+    margin-bottom: 0;
   }
+}
+.hero__form-email.error {
+  border: 1px solid #ff5263;
+  margin-bottom: 0;
 }
 .hero__form-email::placeholder {
   color: #bac9ed;
@@ -472,6 +479,7 @@ p {
   margin-bottom: 20px;
   margin-top: 2px;
   line-height: 20px;
+  display: none;
 }
 @media (min-width: 40em) {
   .hero__form-email-error {
@@ -482,10 +490,12 @@ p {
     font-size: 12px;
   }
 }
+.hero__form-email-error.show {
+  display: block;
+}
 .hero__form-btn {
   display: block;
   width: 100%;
-  margin-top: 8px;
   border: none;
   background-color: #4f7df3;
   color: white;
@@ -500,7 +510,6 @@ p {
 @media (min-width: 40em) {
   .hero__form-btn {
     width: 200px;
-    margin-top: 0;
     font-size: 16px;
     line-height: 19px;
   }
