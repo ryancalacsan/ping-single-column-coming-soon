@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/main.scss" />
+    <script
+      src="https://kit.fontawesome.com/de780d0b4b.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Ping single column coming soon</title>
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <img src="./images/logo.svg" alt="" class="header__logo" />
+      </header>
+      <section class="hero">
+        <h1 class="hero__title">
+          We are launching <span class="hero__title-accent">soon!</span>
+        </h1>
+        <p class="hero__text">Subscribe and get notified</p>
+        <form class="hero__form">
+          <label for="email"></label>
+          <input
+            class="hero__form-email"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your email address..."
+          />
+          <p class="hero__form-email-error">
+            Please provide a valid email address
+          </p>
+          <button class="hero__form-btn" type="submit">Notify Me</button>
+        </form>
+      </section>
+      <img
+        src="./images/illustration-dashboard.png"
+        alt="ping mockup"
+        class="img"
+      />
+      <footer class="footer">
+        <div class="footer__social">
+          <div class="footer__social-circle">
+            <i class="fab fa-facebook-f footer__social-icon facebook"></i>
+          </div>
+          <div class="footer__social-circle">
+            <i class="fab fa-twitter footer__social-icon twitter"></i>
+          </div>
+          <div class="footer__social-circle">
+            <i class="fab fa-instagram footer__social-icon instagram"></i>
+          </div>
+        </div>
+        <p class="footer__copyright">
+          &copy; Copyright Ping. All rights reserved.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>

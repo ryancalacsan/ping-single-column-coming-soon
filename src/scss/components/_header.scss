@@ -1,0 +1,15 @@
+@use "../abstracts" as *;
+
+.header {
+    margin-bottom: 32px;
+
+    @include breakpoint-up(medium) {
+        margin-bottom: 40px;
+    }
+    &__logo {
+        width: 56px;
+        @include breakpoint-up(medium) {
+            width: 90px;
+        }
+    }
+}

@@ -1,0 +1,122 @@
+@use "../abstracts" as *;
+
+.hero {
+    padding: 0 19px;
+    margin-bottom: 40px;
+
+    @include breakpoint-up(medium) {
+        padding: 0;
+        margin-bottom: 68px;
+    }
+
+    &.error {
+        padding-bottom: 26px;
+    }
+    &__title {
+        font-size: $font-lg;
+        font-weight: $light;
+        line-height: 32px;
+        margin-bottom: 15px;
+        color: $gray;
+
+        @include breakpoint-up(medium) {
+            font-size: $font-xxl;
+            line-height: 60px;
+            margin-bottom: 16px;
+        }
+
+        &-accent {
+            font-weight: $bold;
+            color: $very-dark-blue;
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: $light;
+        margin-bottom: 32px;
+
+        @include breakpoint-up(medium) {
+            font-size: $font-md;
+            line-height: 24px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__form {
+        @include breakpoint-up(medium) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &-email {
+            width: 100%;
+            color: $very-dark-blue;
+            font-size: $font-xs;
+            border-radius: 28px;
+            border: 1px solid $pale-blue;
+            padding: 9px 0px 9px 32px;
+            // margin-bottom: 2px;
+            line-height: 20px;
+            @include breakpoint-up(medium) {
+                flex-grow: 1;
+                flex-basis: 50%;
+                margin-right: 16px;
+                padding: 18px 0px 18px 30px;
+                font-size: $font-sm;
+            }
+
+            &::placeholder {
+                color: $desaturated-pale-blue;
+            }
+
+            &-error {
+                color: $light-red;
+                font-style: italic;
+                font-size: $font-xxs;
+                margin-bottom: 20px;
+                margin-top: 2px;
+                line-height: 20px;
+                @include breakpoint-up(medium) {
+                    order: 3;
+                    margin-left: 30px;
+                    margin-bottom: 0;
+                    margin-top: 6px;
+                    font-size: $font-xs;
+                }
+                // display: none;
+
+                // &.show {
+                //     display: block;
+                // }
+            }
+        }
+
+        &-btn {
+            display: block;
+            width: 100%;
+            margin-top: 8px;
+            border: none;
+            background-color: $blue;
+            color: $white;
+            font-weight: $semi-bold;
+            font-size: $font-xs;
+            line-height: 16px;
+            padding: 12px;
+            border-radius: 28px;
+            box-shadow: 0px 5px 10px 2px hsla(223, 87%, 63%, 23.04%);
+            transition: opacity 150ms ease-in-out;
+
+            @include breakpoint-up(medium) {
+                width: 200px;
+                margin-top: 0;
+                font-size: $font-sm;
+                line-height: 19px;
+            }
+
+            &:hover {
+                opacity: 80%;
+            }
+        }
+    }
+}

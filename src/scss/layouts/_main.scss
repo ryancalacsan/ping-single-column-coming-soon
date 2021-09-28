@@ -1,0 +1,11 @@
+@use "../abstracts" as *;
+
+main {
+    padding: 81px 28px 37px 28px;
+    margin: 0 auto;
+    max-width: 696px;
+
+    @include breakpoint-up(medium) {
+        padding: 80px 28px 49px 28px;
+    }
+}

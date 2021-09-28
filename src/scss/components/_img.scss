@@ -1,0 +1,10 @@
+@use "../abstracts" as *;
+
+.img {
+    width: 100%;
+    margin-bottom: 120px;
+
+    @include breakpoint-up(medium) {
+        margin-bottom: 72px;
+    }
+}
